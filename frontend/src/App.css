@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-color: #FF6B35;
+    --secondary-color: #004E89;
+    --accent-color: #F77F00;
+    --bg-color: #F7F7F7;
+    --card-bg: #FFFFFF;
+    --text-color: #1A1A1A;
+    --border-color: #E0E0E0;
+    --success-color: #06D6A0;
+    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-header {
+    background: var(--gradient);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  
+  .header-content p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+  }
+  
+  .app-main {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+  
+  .welcome-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 3rem;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .welcome-card h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .welcome-card > p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+  
+  .dashboard {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    height: calc(100vh - 200px);
+  }
+  
+  .sidebar {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow-y: auto;
+  }
+  
+  .new-session-btn {
+    width: 100%;
+    padding: 0.875rem;
+    background: var(--gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .new-session-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .main-content {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  
+  .app-footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+  }
+  
+  @media (max-width: 968px) {
+    .dashboard {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    
+    .sidebar {
+      order: 2;
+      max-height: 400px;
+    }
+    
+    .main-content {
+      order: 1;
+      min-height: 500px;
+    }
+  }
